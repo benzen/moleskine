@@ -2,7 +2,9 @@ express = require 'express'
 app = express()
 
 app.get "/", (req, res)->
-  res.send(200, "Bonjour le monde!!")
+  res
+   .status 200
+   .send "Bonjour le monde!!"
 
 server = app.listen 3000, ->
 
@@ -11,5 +13,6 @@ server = app.listen 3000, ->
   host = "localhost"
   port = 3000
 
-  console.log "Example app listening at http://#{host}:#{ports}"
+  console.log "Example app listening at http://#{host}:#{port}"
+ 
  
