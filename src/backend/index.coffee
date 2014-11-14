@@ -1,10 +1,18 @@
 express = require 'express'
 app = express()
 
+app.set 'view engine', 'jade'
+app.set 'views', "#{__dirname}/views"
+
 app.get "/", (req, res)->
   res
    .status 200
    .send "Bonjour le monde!!"
+
+app.get "/hello", (req, res)->
+  res
+   .status 200
+   .render "index"
 
 server = app.listen 3000, ->
 
