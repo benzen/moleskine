@@ -1,0 +1,20 @@
+{
+  "name": "moleskine",
+  "version": "0.0.0",
+  "homepage": "https://github.com/picaron/moleskine",
+  "authors": [
+    "Pascal Chouinard <pascal.ch@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ratchetjs": "2.0.2"
+  }
+}
