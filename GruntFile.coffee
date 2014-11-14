@@ -7,12 +7,13 @@ module.exports = (grunt)->
           cwd: 'src/backend'
           src: ['*.coffee']
           dest: 'webapp/'
-          ext: '.js'
-          
+          ext: '.js'          
       copy: 
         main: 
           files: [
-            {expand: true, flatten: true, src: ['src/frontend/*.jade'], dest: 'webapp/views/', filter: 'isFile'}
+            {expand: true, flatten: true, src: ['src/frontend/*.jade'], dest: 'webapp/views/', filter: 'isFile'},
+            {expand: true, cwd:"bower_components/ratchet/dist/", src: ['**'], dest: 'webapp/public/', filter: 'isFile'}
+            {expand: true, cwd:"bower_components/angular/", src:["angular.js"], dest: 'webapp/public/js/', filter: 'isFile'}
           ]
       clean: ["webapp"]
 
@@ -21,4 +22,4 @@ module.exports = (grunt)->
     grunt.loadNpmTasks 'grunt-contrib-coffee'
     grunt.loadNpmTasks 'grunt-contrib-clean'
 
-    grunt.registerTask("default", [ "clean", "copy", "coffee"])
+    grunt.registerTask "default", ["clean", "copy", "coffee"]
