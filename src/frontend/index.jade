@@ -5,5 +5,21 @@ html(ng-app="")
    script(src="js/ratchet.js")
    script(src="js/angular.js")
  body()
-  center I am going away
-  center Like my {{'moustache'}} ?
+  // center I am going away
+  // center Like my {{'moustache'}} ?
+  
+  header.bar.bar-nav
+      button.btn.btn-link.btn-nav.pull-left
+          span.icon.icon-left-nav
+          | - 1 day
+        button.btn.btn-link.btn-nav.pull-right
+          | + 1 day
+          span.icon.icon-right-nav
+        h1.title 2014-01-01
+  .content-padded
+    p text
+    form 
+        input(type='search', placeholder='Search')
+  
+
+    
