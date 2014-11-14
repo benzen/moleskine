@@ -4,22 +4,41 @@ html(ng-app="")
    link(href="css/ratchet-theme-ios.css", rel="stylesheet")
    script(src="js/ratchet.js")
    script(src="js/angular.js")
+   meta(name='viewport', content='initial-scale=1, maximum-scale=1')
  body()
-  // center I am going away
-  // center Like my {{'moustache'}} ?
-  
   header.bar.bar-nav
       button.btn.btn-link.btn-nav.pull-left
           span.icon.icon-left-nav
-          | - 1 day
+          | Yesterday
         button.btn.btn-link.btn-nav.pull-right
-          | + 1 day
+          | Tomorrow
           span.icon.icon-right-nav
         h1.title 2014-01-01
-  .content-padded
-    p text
-    form 
-        input(type='search', placeholder='Search')
-  
-
-    
+  .content
+      .content-padded
+        form 
+          input(type='search', placeholder='Search')
+          
+          ul.table-view
+              li.table-view-cell.media
+                  a.navigate-right
+                    img.media-object.pull-left(src='http://placehold.it/42x42')
+                    .media-body
+                      | Item 1
+                      p
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.
+                li.table-view-cell.media
+                  a.navigate-right
+                    img.media-object.pull-left(src='http://placehold.it/42x42')
+                    .media-body
+                      | Item 1
+                      p
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.
+                li.table-view-cell.media
+                  a.navigate-right
+                    img.media-object.pull-left(src='http://placehold.it/42x42')
+                    .media-body
+                      | Item 1
+                      p
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.
+          
