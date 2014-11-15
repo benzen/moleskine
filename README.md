@@ -16,7 +16,7 @@
 
 #### Installation des modules Node (backend)
 
-```
+```bash
 npm install grunt --save-dev
 npm install bower --save-dev
 npm install grunt-bower-task --save-dev
@@ -32,7 +32,7 @@ sudo npm install grunt-cli -g
 
 #### Installation des modules Bower (front-end)
 
-```
+```bash
 bower install ratchet --save
 bower install angular --save
 ```
@@ -41,8 +41,11 @@ bower install angular --save
 
 #### Compilation
 
+```bash
 grunt
-
+```
 #### Exécution
 
+```bash
 node webapp/
+``` 
